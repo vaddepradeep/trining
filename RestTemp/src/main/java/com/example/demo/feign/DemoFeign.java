@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.example.demo.dto.OrderDto;
 
-@FeignClient(name="http://ORDER-SERVICE/orders")
+@FeignClient(name="http://ORDERSERVICE/orders")
 public interface DemoFeign {
 	@RequestMapping("/list")
 	public List  getOrderList();
