@@ -11,6 +11,8 @@ import com.example.demo.repo.AccountRepo;
 public class AccountDetailsImpl implements AccountDetais {
 	@Autowired
 	private AccountRepo repo;
+	
+	 //private RegisterServiceImpl reg;
 /*
 	@Override
 	public GetAccountDetailsEntity getAccount( long phone) {

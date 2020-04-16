@@ -7,5 +7,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.example.demo.dao.TransactinDao;
 
 public interface TransactionRepo  extends JpaRepository<TransactinDao, Integer>
+{
 
 }

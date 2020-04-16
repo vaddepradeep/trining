@@ -53,17 +53,19 @@ public TransferResponseDto doRegister(@RequestBody RegisterDto dto )
 	
 	
 	@RequestMapping(value="/transfer",method = RequestMethod.POST,consumes = "application/json")
-	public String anountTransfer(@RequestBody AmountTransferDto dto)
+	public AmountTransferDto  anountTransfer(@RequestBody AmountTransferDto dto)
 	{
 		if(checkStatus(dto.getTono()))
 		{
 			
-		 feignser.amountTransfer(dto);
-			return "";
-		}
+		TransferResponseDao resdao= feignser.amountTransfer(dto);
+		TransferResponseDto resdto= new TransferResponseDto();
+		BeanUtils.copyProperties(resdao,resdto);
+			return resdto;
 		else
 		{
-		return "reciver dont have easy pay account";	
+		return resdto.getMsg("amount not trasfred");
+		}	
 		}
 	}
 		@GetMapping("/{phome}")
