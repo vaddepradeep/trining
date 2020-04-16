@@ -8,11 +8,12 @@ import javax.persistence.Table;
 
 @Entity
 @Table
-public class TransactinResDao {
+public class TransactinDao {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 private int id;
 private long to;
+private long from;
 private String status;
 public int getId() {
 	return id;
@@ -31,5 +32,11 @@ public String getStatus() {
 }
 public void setStatus(String status) {
 	this.status = status;
+}
+public long getFrom() {
+	return from;
+}
+public void setFrom(long from) {
+	this.from = from;
 }
 }

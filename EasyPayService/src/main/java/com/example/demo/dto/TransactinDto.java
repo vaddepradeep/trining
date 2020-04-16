@@ -2,6 +2,16 @@ package com.example.demo.dto;
 
 public class TransactinDto {
 private int id;
+private long from;
+
+private long to;
+private String status;
+public long getFrom() {
+	return from;
+}
+public void setFrom(long from) {
+	this.from = from;
+}
 public int getId() {
 	return id;
 }
@@ -20,6 +30,4 @@ public String getStatus() {
 public void setStatus(String status) {
 	this.status = status;
 }
-private long to;
-private String status;
 }

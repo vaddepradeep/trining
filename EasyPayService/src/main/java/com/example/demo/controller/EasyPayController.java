@@ -1,5 +1,7 @@
 package com.example.demo.controller;
 
+import java.util.List;
+
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -39,8 +41,6 @@ public TransferResponseDto doRegister(@RequestBody RegisterDto dto )
 }
 	
 	
-	
-	
 	public boolean checkStatus(long phone)
 	{
 		boolean b=service.checkStatusService(phone);
@@ -72,8 +72,12 @@ public TransferResponseDto doRegister(@RequestBody RegisterDto dto )
 		return	feignser.checkBalance(phone);
 		}
 		
-			
-			
+		@GetMapping("/list")	
+	public List transactionList()
+	{
+		return null;
+		
+	}
 		
 	
 	}
