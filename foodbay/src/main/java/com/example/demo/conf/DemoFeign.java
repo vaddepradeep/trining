@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.example.demo.dto.PamentDto;
 import com.example.demo.dto.PaymentResDto;
 
-@FeignClient(name="")
+@FeignClient(name="(name=\"http://BankSERVICEICE")
 public interface DemoFeign {
 	@RequestMapping(value = "/payment",method =RequestMethod.POST,consumes = "application/json")
 	PaymentResDto doPayment(@RequestBody  PamentDto dto);

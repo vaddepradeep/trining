@@ -18,10 +18,7 @@ public class PaymentController {
 	PaymentResDto doPayment(@RequestBody  PamentDto dto)
 	{
 		PaymentResDto resdto= dfign.doPayment(dto);
-		if(resdto.getPcode()==200)
-		{
-			
-		}
+		
 		return resdto;
 
 }
